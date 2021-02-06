@@ -10,7 +10,7 @@
  * MIT Licensed.
  */
 
-Module.register( 'googlecalendar', {
+Module.register( 'google-calendar', {
 
     // Define module defaults
     defaults: {
