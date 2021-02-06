@@ -173,8 +173,8 @@ class CalendarFetcher {
                         console.log( "Adding: " + title );
                         this.events.push( {
                             title: title,
-                            startDate: startDate?.format( 'x' ),
-                            endDate: endDate?.format( 'x' ),
+                            startDate: startDate.format( 'x' ),
+                            endDate: endDate.format( 'x' ),
                             fullDayEvent: fullDayEvent
                         } );
                     }
