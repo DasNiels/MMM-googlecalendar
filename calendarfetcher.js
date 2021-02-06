@@ -179,56 +179,23 @@ class CalendarFetcher {
                         } );
                     }
                 } );
+
+                // Sort the combination of events from all calendars
+                this.events.sort( ( a, b ) => {
+                    return a.startDate - b.startDate;
+                } );
+
+                // Update 'global' events array
+                this.events = this.events.slice( 0, this.maximumEntries );
+
+                // Broadcast event and setup re-occurring scheduler
+                this.broadcastEvents();
             } else {
                 console.log( 'No upcoming events found.' );
             }
         } );
     }
-
-    // /**
-    //  * Loops over a set of configurable calendarId's and fetch the events.
-    //  *
-    //  * @param auth An authorized OAuth2 client.
-    //  */
-    // async listEvents( auth ) {
-    //     let calendar_ids = [
-    //         'webstep.no_i8smtpm3bbodi61t6ht5qvbthk@group.calendar.google.com',
-    //         'webstep.no_kh3h3l3uhv7pd0slgealv8pgj8@group.calendar.google.com'
-    //     ];
-    //
-    //     let promises = [];
-    //     for( let i = 0; i < calendar_ids.length; i++ ) {
-    //         promises.push( this.createCalendarPromise( calendar_ids[ i ], auth ) );
-    //     }
-    //
-    //     try {
-    //         // Will only run after all Promises are complete
-    //         const results = await Promise.all( promises );
-    //
-    //         let newEvents = this.events;
-    //         // Just for console debugging
-    //         newEvents.map( ( event, i ) => {
-    //             let start = event.startDate;
-    //             console.log( `#${ i }: ${ start } - ${ event.summary }` );
-    //         } );
-    //
-    //         // Sort the combination of events from all calendars
-    //         newEvents.sort( function( a, b ) {
-    //             return a.startDate - b.startDate;
-    //         } );
-    //
-    //         // Update 'global' events array
-    //         this.events = newEvents.slice( 0, maximumEntries );
-    //
-    //         // Broadcast event and setup re-occurring scheduler
-    //         this.broadcastEvents();
-    //     } catch( e ) {
-    //         // Error handling goes here
-    //         console.error( e );
-    //         this.scheduleTimer();
-    //     }
-    // }
-
+    
     /**
      * Store token to disk be used in later program executions.
      *
