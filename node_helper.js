@@ -42,7 +42,7 @@ module.exports = NodeHelper.create({
         fetcher.onReceive( (fetcher) => {
             this.sendSocketNotification('CALENDAR_EVENTS', {
                 calendarName: fetcher.name(),
-                events: fetcher.events()
+                events: fetcher.getEvents()
             });
         });
 

@@ -10,11 +10,11 @@
  * MIT Licensed.
  */
 
-Module.register( 'google-calendar', {
+Module.register( 'googlecalendar', {
 
     // Define module defaults
     defaults: {
-        calendarName: 'google-calendar',
+        calendarName: 'googlecalendar',
         maximumEntries: 10, // Total Maximum Entries
         maximumNumberOfDays: 365,
         displaySymbol: true,

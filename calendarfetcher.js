@@ -333,7 +333,7 @@ class CalendarFetcher {
      *
      * return array - The current available events for this fetcher.
      */
-    events() {
+    getEvents() {
         return this.events;
     };
 }
