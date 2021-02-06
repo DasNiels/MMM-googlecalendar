@@ -36,26 +36,24 @@ module.exports = NodeHelper.create({
      */
 
     createFetcher: function(calendarName, fetchInterval, maximumEntries, maximumNumberOfDays) {
-        var self = this;
-
         var fetcher = new CalendarFetcher(calendarName, fetchInterval, maximumEntries, maximumNumberOfDays);
         console.log('Create new calendar fetcher for: ' + calendarName + ' - Interval: ' + fetchInterval);
         
-        fetcher.onReceive(function(fetcher) {
-            self.sendSocketNotification('CALENDAR_EVENTS', {
+        fetcher.onReceive( (fetcher) => {
+            this.sendSocketNotification('CALENDAR_EVENTS', {
                 calendarName: fetcher.name(),
                 events: fetcher.events()
             });
         });
 
-        fetcher.onError(function(fetcher, error) {
-            self.sendSocketNotification('FETCH_ERROR', {
+        fetcher.onError(( fetcher, error ) => {
+            this.sendSocketNotification('FETCH_ERROR', {
                 calendarName: fetcher.name(),
                 error: error
             });
         });
 
-        self.fetchers[calendarName] = fetcher;
+        this.fetchers[ calendarName ] = fetcher;
 
         fetcher.startFetch();
     }

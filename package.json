@@ -1,6 +1,6 @@
 {
-  "name": "googlecalendar",
-  "version": "1.0.0",
+  "name": "google-calendar",
+  "version": "1.0.1",
   "description": "Google Calendar module for Magic Mirror",
   "main": "googlecalendar.js",
   "scripts": {

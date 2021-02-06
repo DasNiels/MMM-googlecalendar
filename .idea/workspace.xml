@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2eacd25a-f8da-4bd6-9c0c-af01c3546dcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/MMM-googlecalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/calendarfetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/calendarfetcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/googlecalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/googlecalendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_helper.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_helper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1o7N29cKQ12Yr08IYW4lUylkVAe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2eacd25a-f8da-4bd6-9c0c-af01c3546dcc" name="Default Changelist" comment="" />
+      <created>1612633458863</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612633458863</updated>
+      <workItem from="1612633460047" duration="2351000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2587" y="253" width="585" height="534" key="find.popup" timestamp="1612644166518">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2587" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612644166518" />
+  </component>
+</project>
