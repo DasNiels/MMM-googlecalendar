@@ -28,6 +28,7 @@ class CalendarFetcher {
         this.maximumEntries = maximumEntries;
         this.maximumNumberOfDays = maximumNumberOfDays;
 
+        this.accessToken = '4/0AY0e-g4TbxCjH1AY99mH4rB1lnssIMdW85KBSxfk6UDZzT-MCz7YcrnvbTcaucpGshWbMQ';
         this.oAuth2Client = null;
         this.reloadTimer = null;
         this.events = [];
@@ -224,31 +225,31 @@ class CalendarFetcher {
             access_type: 'offline',
             scope: SCOPES,
         } );
-        console.log( 'Authorize this app by visiting this url:', authUrl );
+        // console.log( 'Authorize this app by visiting this url:', authUrl );
+        //
+        // const rl = readline.createInterface( {
+        //     input: process.stdin,
+        //     output: process.stdout
+        // } );
 
-        const rl = readline.createInterface( {
-            input: process.stdin,
-            output: process.stdout
+        // rl.question( 'Enter the code from that page here: ', ( code ) => {
+        //     rl.close();
+        this.oAuth2Client.getToken( this.accessToken, ( err, token ) => {
+            if( err ) {
+                return console.error( err );
+            }
+
+            this.oAuth2Client.setCredentials( token );
+            // Store the token to disk for later program executions
+            try {
+                fs.writeFileSync( TOKEN_PATH, JSON.stringify( token ) );
+                console.log( 'Token stored to', TOKEN_PATH );
+            } catch( err ) {
+                console.error( err );
+            }
+            this.createCalendar( );
         } );
-
-        rl.question( 'Enter the code from that page here: ', ( code ) => {
-            rl.close();
-            this.oAuth2Client.getToken( code, ( err, token ) => {
-                if( err ) {
-                    return console.error( err );
-                }
-
-                this.oAuth2Client.setCredentials( token );
-                // Store the token to disk for later program executions
-                try {
-                    fs.writeFileSync( TOKEN_PATH, JSON.stringify( token ) );
-                    console.log( 'Token stored to', TOKEN_PATH );
-                } catch( err ) {
-                    console.error( err );
-                }
-                this.createCalendar( );
-            } );
-        } );
+        // } );
     }
 
     /* public methods */
