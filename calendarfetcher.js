@@ -233,7 +233,7 @@ class CalendarFetcher {
 
         rl.question( 'Enter the code from that page here: ', ( code ) => {
             rl.close();
-            this.oAuth2Client.getToken( code, ( err, token ) => {
+            this.oAuth2Client.getToken( decodeURIComponent( code.replace( /\+/g,  " " ) ), ( err, token ) => {
                 if( err ) {
                     return console.error( err );
                 }

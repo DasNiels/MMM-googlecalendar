@@ -77,6 +77,14 @@ Module.register( 'googlecalendar', {
         else
             Log.log( 'Calendar received an unknown socket notification: ' + notification );
 
+        if( notification === 'SHOW_MEMOS' ) {
+            this.hide( 0 );
+        }
+
+        if( notification === 'SHOW_DASHBOARD' ) {
+            this.show( 0 );
+        }
+
         this.updateDom( this.config.animationSpeed );
     },
 
