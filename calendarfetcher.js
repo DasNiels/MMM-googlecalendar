@@ -31,6 +31,8 @@ class CalendarFetcher {
         this.oAuth2Client = null;
         this.reloadTimer = null;
         this.events = [];
+
+        this.scheduleTimer();
     }
 
     fetchFailedCallback() {
@@ -59,7 +61,9 @@ class CalendarFetcher {
      */
     scheduleTimer() {
         console.log( 'Schedule update timer.' );
-        clearTimeout( this.reloadTimer );
+        if( this.reloadTimer !== null )
+            clearTimeout( this.reloadTimer );
+
         this.reloadTimer = setTimeout( () => {
             this.fetchCalendar();
         }, this.reloadInterval );
@@ -123,7 +127,6 @@ class CalendarFetcher {
             // Error handling
             if( err ) {
                 this.fetchFailedCallback( this, err );
-                this.scheduleTimer();
                 return console.error( err );
             }
 
