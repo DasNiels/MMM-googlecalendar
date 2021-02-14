@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eacd25a-f8da-4bd6-9c0c-af01c3546dcc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calendarfetcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/calendarfetcher.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +42,7 @@
       <workItem from="1612971756747" duration="792000" />
       <workItem from="1613083199956" duration="674000" />
       <workItem from="1613117766945" duration="30000" />
-      <workItem from="1613321948758" duration="121000" />
+      <workItem from="1613321948758" duration="567000" />
     </task>
     <servers />
   </component>

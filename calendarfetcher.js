@@ -65,6 +65,7 @@ class CalendarFetcher {
             clearTimeout( this.reloadTimer );
 
         this.reloadTimer = setTimeout( () => {
+            this.events = [];
             this.fetchCalendar();
         }, this.reloadInterval );
     }
