@@ -31,8 +31,6 @@ class CalendarFetcher {
         this.oAuth2Client = null;
         this.reloadTimer = null;
         this.events = [];
-
-        this.scheduleTimer();
     }
 
     fetchFailedCallback() {
@@ -64,10 +62,10 @@ class CalendarFetcher {
         if( this.reloadTimer !== null )
             clearTimeout( this.reloadTimer );
 
-        this.reloadTimer = setTimeout( () => {
-            this.events = [];
-            this.fetchCalendar();
-        }, this.reloadInterval );
+        this.events = [];
+        this.fetchCalendar();
+
+        this.reloadTimer = setTimeout( this.scheduleTimer, this.reloadInterval );
     }
 
     /* isFullDayEvent(event)
@@ -262,7 +260,7 @@ class CalendarFetcher {
      * Initiate fetchCalendar();
      */
     startFetch() {
-        this.fetchCalendar();
+        this.scheduleTimer();
     };
 
     /* broadcastItems()
