@@ -65,7 +65,7 @@ class CalendarFetcher {
         this.events = [];
         this.fetchCalendar();
 
-        this.reloadTimer = setTimeout( this.scheduleTimer, this.reloadInterval );
+        this.reloadTimer = setTimeout( ( ) => { this.scheduleTimer( ); }, this.reloadInterval );
     }
 
     /* isFullDayEvent(event)
